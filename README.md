@@ -5,7 +5,7 @@
 Download [or clone the repo](https://github.com/ilyas-muhammad/petaniweb.git):
 
 ```sh
-cd create-react-app-with-typescript
+cd petaniweb
 ```
 
 Install it and run:
