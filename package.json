@@ -3,15 +3,34 @@
   "version": "4.0.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@material-ui/core": "^4.9.10",
     "react": "latest",
     "react-dom": "latest",
     "react-scripts": "latest",
     "typescript": "latest"
   },
+  "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@types/classnames": "^2.2.9",
+    "@types/react-select": "^3.0.0",
+    "@types/react-swipeable-views": "^0.13.0",
+    "@types/styled-jsx": "^2.2.8",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.16.4",
+    "typescript": "^3.5.3"
+  },
   "scripts": {
+    "compile": "tsc",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -27,6 +46,16 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,jsx}": [
+      "git add"
     ]
   }
 }
