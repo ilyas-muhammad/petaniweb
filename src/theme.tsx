@@ -3,18 +3,25 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 // A custom theme for this app
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: '-apple-system',
+  },
   palette: {
+    background: {
+      default: '#121212',
+    },
     primary: {
-      main: '#556cd6',
+      main: '#F5802E',
     },
     secondary: {
-      main: '#19857b',
+      main: '#383838',
+    },
+    text: {
+      primary: '#707070',
+      secondary: '#707070',
     },
     error: {
       main: red.A400,
-    },
-    background: {
-      default: '#fff',
     },
   },
 });

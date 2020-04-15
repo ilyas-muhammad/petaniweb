@@ -1,9 +1,18 @@
 {
-  "name": "create-react-app-with-typescript",
-  "version": "4.0.0",
+  "name": "petaniweb-react-typescript",
+  "version": "1.0.0",
   "private": true,
+  "author": "PetaniWeb",
+  "scripts": {
+    "compile": "tsc",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@material-ui/core": "^4.9.10",
+    "@material-ui/icons": "^4.9.1",
     "react": "latest",
     "react-dom": "latest",
     "react-scripts": "latest",
@@ -13,11 +22,11 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@types/classnames": "^2.2.9",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "@types/react-select": "^3.0.0",
     "@types/react-swipeable-views": "^0.13.0",
     "@types/styled-jsx": "^2.2.8",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
     "eslint": "^6.6.0",
@@ -28,13 +37,6 @@
     "lint-staged": "^9.2.1",
     "prettier": "^1.16.4",
     "typescript": "^3.5.3"
-  },
-  "scripts": {
-    "compile": "tsc",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [

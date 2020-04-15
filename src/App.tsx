@@ -1,33 +1,32 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
 import ProTip from './component/ProTip';
+import Copyright from './component/Copyright';
+import Navbar from './component/Navbar';
+import ServiceSection from './component/ServiceSection';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://petaniweb.com/">
-        Petaniweb
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      width: '100%',
+      padding: theme.spacing(0, 8),
+    },
+  }),
+);
 
 export default function App() {
+  const classes = useStyles();
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Create React App TypeScript
-        </Typography>
+    <>
+      <Navbar />
+      <Container className={classes.root} maxWidth="lg">
+        <ServiceSection />
+
         <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+      </Container>
+
+      <Copyright />
+    </>
   );
 }
