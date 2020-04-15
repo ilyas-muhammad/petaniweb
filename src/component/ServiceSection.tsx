@@ -1,13 +1,25 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    center: {
+      marginTop: 10,
+    },
+    image: {
+      alignItems: 'center',
+      width: '50%',
+      marginTop: 100,
+    },
+  }),
+);
 
 const ServiceSection = () => {
+  const classes = useStyles();
   return (
-    <Box my={4}>
-      <Typography variant="h4" component="h1" gutterBottom>
-        Create React App TypeScript
-      </Typography>
+    <Box display="flex" justifyContent="center">
+      <img className={classes.image} src="PetaniWeb-Horizontal.png" alt="petaniweb" />
     </Box>
   );
 };
