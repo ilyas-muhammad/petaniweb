@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/petaniweb/static/js/main.5134abea.chunk.js",
-    "main.js.map": "/petaniweb/static/js/main.5134abea.chunk.js.map",
+    "main.js": "/petaniweb/static/js/main.e655f93b.chunk.js",
+    "main.js.map": "/petaniweb/static/js/main.e655f93b.chunk.js.map",
     "runtime-main.js": "/petaniweb/static/js/runtime-main.e313616e.js",
     "runtime-main.js.map": "/petaniweb/static/js/runtime-main.e313616e.js.map",
     "static/js/2.60c104a3.chunk.js": "/petaniweb/static/js/2.60c104a3.chunk.js",
     "static/js/2.60c104a3.chunk.js.map": "/petaniweb/static/js/2.60c104a3.chunk.js.map",
     "index.html": "/petaniweb/index.html",
-    "precache-manifest.d855eec6535f433a358bea8dc96ceaea.js": "/petaniweb/precache-manifest.d855eec6535f433a358bea8dc96ceaea.js",
+    "precache-manifest.1e7ed6035df0776a7cbf74470d81dac7.js": "/petaniweb/precache-manifest.1e7ed6035df0776a7cbf74470d81dac7.js",
     "service-worker.js": "/petaniweb/service-worker.js",
     "static/js/2.60c104a3.chunk.js.LICENSE.txt": "/petaniweb/static/js/2.60c104a3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e313616e.js",
     "static/js/2.60c104a3.chunk.js",
-    "static/js/main.5134abea.chunk.js"
+    "static/js/main.e655f93b.chunk.js"
   ]
 }
