@@ -12,8 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       height: 520,
       width: 390,
-      backgroundColor: '#383838',
-      zIndex: 10,
+      backgroundImage: 'UI Kendaliku Instastory 2',
     },
     ourProject: {
       margin: theme.spacing(0, 9),
@@ -34,7 +33,7 @@ const ServiceSection = (props) => {
     <>
       <Grid {...props} container justify="center" className={classes.root} spacing={9}>
         <Grid item xs={4}>
-          <Paper color="secondary" className={classes.paper} />
+          <Paper className={classes.paper} />
         </Grid>
         <Grid item xs={6} className={classes.ourProject}>
           <h1>Our Project</h1>
