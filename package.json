@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ilyas-muhammad.github.io/petaniweb/",
   "name": "petaniweb-react-typescript",
   "version": "1.0.0",
   "private": true,
@@ -9,7 +10,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:docs": "react-scripts build && rm -rf docs && cp -R build docs"
+    "build:docs": "react-scripts build && rm -rf docs && cp -R build docs",
+    "deploy:gh": "gh-pages -d docs"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.10",
@@ -33,6 +35,7 @@
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "gh-pages": "^2.2.0",
     "husky": "^3.0.2",
     "lint-staged": "^9.2.1",
     "prettier": "^1.16.4",
@@ -40,7 +43,7 @@
   },
   "resolutions": {
     "@babel/preset-env": "7.5.5"
-   },
+  },
   "browserslist": {
     "production": [
       ">0.2%",
