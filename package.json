@@ -8,15 +8,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:docs": "react-scripts build && rm -rf docs && cp -R build docs"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@material-ui/icons": "^4.9.1",
     "react": "latest",
     "react-dom": "latest",
-    "react-scripts": "latest",
-    "typescript": "latest"
+    "react-scripts": "latest"
   },
   "devDependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
@@ -36,8 +36,11 @@
     "husky": "^3.0.2",
     "lint-staged": "^9.2.1",
     "prettier": "^1.16.4",
-    "typescript": "^3.5.3"
+    "typescript": "latest"
   },
+  "resolutions": {
+    "@babel/preset-env": "7.5.5"
+   },
   "browserslist": {
     "production": [
       ">0.2%",
