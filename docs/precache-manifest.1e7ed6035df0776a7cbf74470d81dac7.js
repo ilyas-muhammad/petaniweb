@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1e57f55df03fc976379e7abf8b319f72",
+    "revision": "1aedb15a41bbdf5d8c4fdd8cdaddc11b",
     "url": "/petaniweb/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/petaniweb/static/js/2.60c104a3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d66d765a8a73ad202f1f",
-    "url": "/petaniweb/static/js/main.5134abea.chunk.js"
+    "revision": "9e8dfb54739b415b3106",
+    "url": "/petaniweb/static/js/main.e655f93b.chunk.js"
   },
   {
     "revision": "5fb1c603e95e4bf60fb7",
