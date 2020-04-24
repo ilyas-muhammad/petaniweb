@@ -1,61 +1,104 @@
 import React from 'react';
-import { Theme, makeStyles, createStyles } from '@material-ui/core/styles';
-import { Menu } from '@material-ui/core';
-import IconButton from '@material-ui/core/IconButton';
-import { MenuOutlined as MenuIcon } from '@material-ui/icons';
+import { withStyles, makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Menu, { MenuProps } from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SendIcon from '@material-ui/icons/Send';
+import MenuOutlined from '@material-ui/icons/MenuOutlined';
 
 const styles = makeStyles((theme: Theme) =>
   createStyles({
     buttonCollapse: {
       [theme.breakpoints.up('sm')]: {
         display: 'none',
+        color: '#fff',
       },
-      margin: '10px',
-      boxShadow: 'none',
-    },
-    icon: {
-      color: '#ffffff',
-      opacity: 0.6,
+      margin: 20,
     },
   }),
 );
 
-const ButtonAppBarCollapse = (props) => {
-  const [anchorEl, setAnchorEl] = React.useState<Element | null>(null);
-  const [open, setOpen] = React.useState<boolean>(false);
+const StyledMenu = withStyles({
+  paper: {
+    border: '1px solid #d3d4d5',
+    backgroundColor: '#383838',
+  },
+})((props: MenuProps) => (
+  <Menu
+    elevation={0}
+    getContentAnchorEl={null}
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'center',
+    }}
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'center',
+    }}
+    {...props}
+  />
+));
 
-  const handleMenu = (event) => {
+const StyledMenuItem = withStyles((theme) => ({
+  root: {
+    '&:focus': {
+      backgroundColor: theme.palette.secondary.main,
+      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+        color: '#fff',
+      },
+    },
+    backgroundColor: '#383838',
+  },
+}))(MenuItem);
+
+export default function CustomizedMenus() {
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
-    setOpen(true);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
-    setOpen(false);
   };
 
   const classes = styles();
 
   return (
     <div className={classes.buttonCollapse}>
-      <IconButton onClick={handleMenu}>
-        <MenuIcon className={classes.icon} />
-      </IconButton>
-      <Menu
-        id="menu-appbar"
-        anchorEl={anchorEl}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
-        open={open}
-        onClose={handleClose}
-        {...props}
-      ></Menu>
+      <Button
+        aria-controls="customized-menu"
+        aria-haspopup="true"
+        variant="contained"
+        color="primary"
+        onClick={handleClick}
+      >
+        <MenuOutlined />
+      </Button>
+      <StyledMenu id="customized-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
+        <StyledMenuItem>
+          <ListItemIcon>
+            <SendIcon color="primary" fontSize="small" />
+          </ListItemIcon>
+          <ListItemText primary="Sent mail" />
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <ListItemIcon>
+            <DraftsIcon color="primary" fontSize="small" />
+          </ListItemIcon>
+          <ListItemText primary="Drafts" />
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <ListItemIcon>
+            <InboxIcon color="primary" fontSize="small" />
+          </ListItemIcon>
+          <ListItemText primary="Inbox" />
+        </StyledMenuItem>
+      </StyledMenu>
     </div>
   );
-};
-export default ButtonAppBarCollapse;
+}

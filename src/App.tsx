@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       top: '30%',
     },
+    projectSection: {
+      marginTop: theme.spacing(10),
+    },
   }),
 );
 
@@ -57,9 +60,10 @@ export default function App() {
         <Grid item md={10} xs={10}>
           <ServiceSection />
         </Grid>
-        <Container className={classes.root} maxWidth="lg">
+        <Grid container justify="center" className={classes.projectSection} item md={10} xs={10}>
           <ProjectSection />
-        </Container>
+        </Grid>
+        <Container className={classes.root}></Container>
         <Copyright className={classes.footer} />
       </Grid>
     </>

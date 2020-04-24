@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, MenuItem } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { Theme, makeStyles, createStyles } from '@material-ui/core/styles';
 import ButtonAppBarCollapse from './ButtonAppBarCollapse';
 
@@ -12,7 +12,7 @@ const styles = makeStyles((theme: Theme) =>
     buttonBar: {
       [theme.breakpoints.down('xs')]: {
         display: 'none',
-        background: '#000',
+        color: '#fff',
       },
       margin: '10px',
       paddingLeft: '20px',
@@ -24,6 +24,7 @@ const styles = makeStyles((theme: Theme) =>
     capitalize: {
       textTransform: 'capitalize',
       fontSize: '2.5vh',
+      color: 'secondary',
     },
   }),
 );
@@ -32,33 +33,14 @@ const AppBarCollapse = () => {
   const classes = styles();
   return (
     <div className={classes.root}>
-      <ButtonAppBarCollapse>
-        <MenuItem>Home</MenuItem>
-        <MenuItem>Service</MenuItem>
-        <MenuItem>Project</MenuItem>
-        <MenuItem>Course</MenuItem>
-        <MenuItem>About Us</MenuItem>
-        <MenuItem>Contact</MenuItem>
-      </ButtonAppBarCollapse>
+      <ButtonAppBarCollapse />
       <div className={classes.buttonBar} id="appbar-collapse">
-        <Button className={classes.capitalize} color="inherit">
-          Home
-        </Button>
-        <Button className={classes.capitalize} color="inherit">
-          Service
-        </Button>
-        <Button className={classes.capitalize} color="inherit">
-          Project
-        </Button>
-        <Button className={classes.capitalize} color="inherit">
-          Course
-        </Button>
-        <Button className={classes.capitalize} color="inherit">
-          About Us
-        </Button>
-        <Button className={classes.capitalize} color="inherit">
-          Contact
-        </Button>
+        <Button className={classes.capitalize}>Home</Button>
+        <Button className={classes.capitalize}>Service</Button>
+        <Button className={classes.capitalize}>Project</Button>
+        <Button className={classes.capitalize}>Course</Button>
+        <Button className={classes.capitalize}>About Us</Button>
+        <Button className={classes.capitalize}>Contact</Button>
       </div>
     </div>
   );
