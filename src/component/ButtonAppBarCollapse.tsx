@@ -114,7 +114,7 @@ export default function CustomizedMenus() {
           <ListItemIcon>
             <InboxIcon color="primary" fontSize="small" />
           </ListItemIcon>
-          <ListItemText primary="Contact" />
+          <ListItemText primary="Contacts" />
         </StyledMenuItem>
       </StyledMenu>
     </div>
