@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/user/public_html/petaniweb/
+    - export DEPLOYPATH=/home/petaniw1/public_html/petaniweb/
     - /bin/cp -R build $DEPLOYPATH
