@@ -1,7 +1,6 @@
 import React from 'react';
-import { Grid, Card, CardMedia, CardContent, Button } from '@material-ui/core';
+import { Grid, Card, CardMedia, CardContent, Button, Typography } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -52,7 +51,7 @@ const ServiceSection = (props) => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item md={6} xs={12} className={classes.typograph}>
+        <Grid item md={5} xs={12} className={classes.typograph}>
           <h1>Our Project</h1>
           <Typography>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et

@@ -6,6 +6,7 @@ import Copyright from './component/Copyright';
 import Navbar from './component/Navbar';
 import ServiceSection from './component/ServiceSection';
 import ProjectSection from './component/ProjectSection';
+import TestimonialSection from './component/TestimonialSection';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,20 +16,50 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     circle: {
       width: '100%',
-      position: 'relative',
-      [theme.zIndex.drawer]: -5,
+      position: 'static',
     },
     footer: {
       width: '100%',
       position: 'absolute',
       bottom: '-5%',
     },
-    masterServiceSection: {
+    masterSection: {
       position: 'absolute',
       top: '30%',
     },
     projectSection: {
+      marginTop: theme.spacing(15),
+      [theme.breakpoints.up('sm')]: {
+        zIndex: 2,
+        position: 'absolute',
+        top: '35%',
+        left: '0%',
+      },
+    },
+    projectCircle: {
+      width: '100%',
+      position: 'static',
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
+    },
+    dividerEachSection: {
       marginTop: theme.spacing(10),
+    },
+    testiSection: {
+      [theme.breakpoints.up('sm')]: {
+        zIndex: 2,
+        position: 'absolute',
+        top: '75%',
+        left: '15%',
+      },
+      [theme.breakpoints.down('sm')]: {
+        zIndex: 2,
+        position: 'absolute',
+        top: '93%',
+        left: '15%',
+      },
+      textAlign: 'justify',
     },
   }),
 );
@@ -46,6 +77,33 @@ function CircleIcon(props: IconProps) {
   );
 }
 
+const CircleOnProject = (props: IconProps) => {
+  return (
+    <Icon {...props}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="80%" height="100%" viewBox="0 0 938 914">
+        <g transform="translate(0 -1456)" fill="#f5802e">
+          <circle cx="288" cy="288" r="288" transform="translate(0 1456)" opacity=".83" />
+          <circle cx="86" cy="86" r="86" transform="translate(766 2198)" opacity=".37" />
+        </g>
+      </svg>
+    </Icon>
+  );
+};
+
+const CircleTestimonial = (props: IconProps) => {
+  return (
+    <Icon {...props}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 2368 1058">
+        <g transform="translate(246 -2581)" fill="#f5802e">
+          <circle cx="233" cy="233" r="233" transform="translate(-446 2581)" opacity=".83" />
+          <circle cx="288" cy="288" r="288" transform="translate(1846 2963)" opacity=".83" />
+          <circle cx="146" cy="146" r="146" transform="translate(1551 2690)" opacity=".37" />
+        </g>
+      </svg>
+    </Icon>
+  );
+};
+
 export default function App() {
   const classes = useStyles();
   return (
@@ -56,14 +114,29 @@ export default function App() {
       <Grid item xs={12}>
         <CircleIcon className={classes.circle} />
       </Grid>
-      <Grid container justify="center" className={classes.masterServiceSection}>
+      <Grid container justify="center" className={classes.masterSection}>
         <Grid item md={10} xs={10}>
           <ServiceSection />
         </Grid>
-        <Grid container justify="center" className={classes.projectSection} item md={10} xs={10}>
-          <ProjectSection />
+        <Grid className={classes.dividerEachSection} container justify="flex-start" item md={10} xs={10}>
+          <Grid container justify="center" item md={10} xs={12}>
+            <ProjectSection className={classes.projectSection} />
+          </Grid>
+          <Grid item xs={6}>
+            <CircleOnProject className={classes.projectCircle} />
+          </Grid>
         </Grid>
         <Container className={classes.root}></Container>
+
+        {/* Testimonial Section */}
+        <Grid className={classes.dividerEachSection} container justify="center" item md={12} xs={12}>
+          <Grid item xs={12}>
+            <CircleTestimonial />
+          </Grid>
+          <Grid container justify="center" item md={10} xs={10}>
+            <TestimonialSection className={classes.testiSection} />
+          </Grid>
+        </Grid>
         <Copyright className={classes.footer} />
       </Grid>
     </>

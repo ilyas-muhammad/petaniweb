@@ -84,19 +84,37 @@ export default function CustomizedMenus() {
           <ListItemIcon>
             <SendIcon color="primary" fontSize="small" />
           </ListItemIcon>
-          <ListItemText primary="Sent mail" />
+          <ListItemText primary="Home" />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemIcon>
             <DraftsIcon color="primary" fontSize="small" />
           </ListItemIcon>
-          <ListItemText primary="Drafts" />
+          <ListItemText primary="Service" />
         </StyledMenuItem>
         <StyledMenuItem>
           <ListItemIcon>
             <InboxIcon color="primary" fontSize="small" />
           </ListItemIcon>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="Project" />
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <ListItemIcon>
+            <InboxIcon color="primary" fontSize="small" />
+          </ListItemIcon>
+          <ListItemText primary="Course" />
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <ListItemIcon>
+            <InboxIcon color="primary" fontSize="small" />
+          </ListItemIcon>
+          <ListItemText primary="About Us" />
+        </StyledMenuItem>
+        <StyledMenuItem>
+          <ListItemIcon>
+            <InboxIcon color="primary" fontSize="small" />
+          </ListItemIcon>
+          <ListItemText primary="Contact" />
         </StyledMenuItem>
       </StyledMenu>
     </div>
