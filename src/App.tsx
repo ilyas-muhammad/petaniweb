@@ -7,6 +7,7 @@ import Navbar from './component/Navbar';
 import ServiceSection from './component/ServiceSection';
 import ProjectSection from './component/ProjectSection';
 import TestimonialSection from './component/TestimonialSection';
+import CourseSection from './component/CourseSection';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '35%',
+        top: '28%',
         left: '0%',
       },
     },
@@ -50,13 +51,13 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '75%',
+        top: '58%',
         left: '15%',
       },
       [theme.breakpoints.down('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '93%',
+        top: '75.5%',
         left: '15%',
       },
       textAlign: 'justify',
@@ -135,6 +136,13 @@ export default function App() {
           </Grid>
           <Grid container justify="center" item md={10} xs={10}>
             <TestimonialSection className={classes.testiSection} />
+          </Grid>
+        </Grid>
+
+        {/* Course Section */}
+        <Grid className={classes.dividerEachSection} container justify="center" item md={12} xs={12}>
+          <Grid container justify="center" item md={10} xs={10}>
+            <CourseSection />
           </Grid>
         </Grid>
         <Copyright className={classes.footer} />

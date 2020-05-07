@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: theme.spacing(5, 0),
     },
     card: {
-      height: 400,
-      width: 330,
+      height: 430,
+      width: '100%',
       backgroundColor: '#383838',
       zIndex: 10,
     },
@@ -58,7 +58,7 @@ const ServiceSection = (props) => {
             your company&apos;s needs.
           </Typography>
         </Grid>
-        <Grid className={classes.content} container direction="row" alignItems="center" spacing={2}>
+        <Grid className={classes.content} container direction="row" alignItems="center" spacing={1}>
           <Grid item md={4} xs={10}>
             <Card className={classes.card}>
               <CardMedia className={classes.media} image="webdevicon.png" title="Web Development" />
