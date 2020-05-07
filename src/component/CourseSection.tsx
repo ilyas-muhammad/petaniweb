@@ -4,20 +4,6 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {},
-    card: {
-      height: 400,
-      width: 330,
-      backgroundColor: '#383838',
-    },
-    media: {
-      height: 135,
-      width: 135,
-      position: 'relative',
-      left: '30%',
-      top: '10%',
-      marginBottom: '20%',
-    },
     button: {
       backgroundColor: '#6D2EF5',
       color: '#fff',
@@ -31,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const ServiceSection = (props) => {
+const CourseSection = (props) => {
   const classes = useStyles();
   return (
     <>
@@ -57,4 +43,4 @@ const ServiceSection = (props) => {
   );
 };
 
-export default ServiceSection;
+export default CourseSection;
