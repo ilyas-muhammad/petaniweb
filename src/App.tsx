@@ -7,6 +7,10 @@ import Navbar from './component/Navbar';
 import ServiceSection from './component/ServiceSection';
 import ProjectSection from './component/ProjectSection';
 import TestimonialSection from './component/TestimonialSection';
+import CourseSection from './component/CourseSection';
+import TeamSection from './component/TeamSection';
+import AboutSection from './component/AboutSection';
+import ContactSection from './component/ContactSection';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,8 +24,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     footer: {
       width: '100%',
+      minHeight: 30,
       position: 'absolute',
       bottom: '-5%',
+      backgroundColor: 'rgba(255, 255, 255, 0.16)',
+      padding: '0.5% 10% 0 8%',
     },
     masterSection: {
       position: 'absolute',
@@ -32,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '35%',
+        top: '21%',
         left: '0%',
       },
     },
@@ -50,13 +57,13 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '75%',
+        top: '42%',
         left: '15%',
       },
       [theme.breakpoints.down('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '93%',
+        top: '56%',
         left: '15%',
       },
       textAlign: 'justify',
@@ -137,7 +144,39 @@ export default function App() {
             <TestimonialSection className={classes.testiSection} />
           </Grid>
         </Grid>
-        <Copyright className={classes.footer} />
+
+        {/* Course Section */}
+        <Grid className={classes.dividerEachSection} container justify="center" item md={12} xs={12}>
+          <Grid container justify="center" item md={10} xs={10}>
+            <CourseSection />
+          </Grid>
+        </Grid>
+
+        {/* Team Section */}
+        <Grid className={classes.dividerEachSection} container justify="center" item md={12} xs={12}>
+          <Grid container justify="center" item md={10} xs={10}>
+            <TeamSection />
+          </Grid>
+        </Grid>
+
+        {/* About Section */}
+        <Grid className={classes.dividerEachSection} container justify="center" item md={12} xs={12}>
+          <Grid container justify="center" item md={10} xs={10}>
+            <AboutSection />
+          </Grid>
+        </Grid>
+
+        {/* Contact Section */}
+        <Grid className={classes.dividerEachSection} container justify="center" item md={12} xs={12}>
+          <Grid container justify="center" item md={10} xs={10}>
+            <ContactSection />
+          </Grid>
+        </Grid>
+        <Grid className={classes.footer}>
+          <Grid item xs={12} md={12}>
+            <Copyright />
+          </Grid>
+        </Grid>
       </Grid>
     </>
   );
