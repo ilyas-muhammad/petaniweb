@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Avatar, Typography } from '@material-ui/core';
+import { Grid, Avatar } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>

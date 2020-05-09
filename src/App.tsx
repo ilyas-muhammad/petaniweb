@@ -9,6 +9,8 @@ import ProjectSection from './component/ProjectSection';
 import TestimonialSection from './component/TestimonialSection';
 import CourseSection from './component/CourseSection';
 import TeamSection from './component/TeamSection';
+import AboutSection from './component/AboutSection';
+import ContactSection from './component/ContactSection';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,8 +24,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     footer: {
       width: '100%',
+      minHeight: 30,
       position: 'absolute',
       bottom: '-5%',
+      backgroundColor: 'rgba(255, 255, 255, 0.16)',
+      padding: '0.5% 10% 0 8%',
     },
     masterSection: {
       position: 'absolute',
@@ -34,7 +39,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '24%',
+        top: '21%',
         left: '0%',
       },
     },
@@ -52,7 +57,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '48%',
+        top: '42%',
         left: '15%',
       },
       [theme.breakpoints.down('sm')]: {
@@ -153,7 +158,25 @@ export default function App() {
             <TeamSection />
           </Grid>
         </Grid>
-        <Copyright className={classes.footer} />
+
+        {/* About Section */}
+        <Grid className={classes.dividerEachSection} container justify="center" item md={12} xs={12}>
+          <Grid container justify="center" item md={10} xs={10}>
+            <AboutSection />
+          </Grid>
+        </Grid>
+
+        {/* Contact Section */}
+        <Grid className={classes.dividerEachSection} container justify="center" item md={12} xs={12}>
+          <Grid container justify="center" item md={10} xs={10}>
+            <ContactSection />
+          </Grid>
+        </Grid>
+        <Grid className={classes.footer}>
+          <Grid item xs={12} md={12}>
+            <Copyright />
+          </Grid>
+        </Grid>
       </Grid>
     </>
   );
