@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('sm')]: {
         zIndex: 2,
         position: 'absolute',
-        top: '56%',
+        top: '50.5%',
         left: '15%',
       },
       textAlign: 'justify',
